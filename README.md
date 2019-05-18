@@ -1,2 +1,0 @@
-# rutgersBC
-Rutgers Bootcamp Homework
