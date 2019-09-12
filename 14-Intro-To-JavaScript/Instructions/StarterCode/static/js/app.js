@@ -1,7 +1,17 @@
 // from data.js
 var tableData = data;
 
-console.log(data);
+// YOUR CODE HERE!
+var tbody = d3.select("tbody");
 
-data.forEach(function(tableData) {
-    console.log(tableData);
+// Grab data and loop through
+
+data.forEach((dataRow) => {
+    var row = tbody.append("tr");
+    Object.values(dataRow).forEach((val) => {
+      var cell = row.append("td");
+        cell.text(val);
+      }
+    );
+  });
+
