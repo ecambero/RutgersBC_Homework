@@ -9,7 +9,7 @@ var tbody = d3.select("tbody");
 function buildTable(data) {
   // First, clear out any existing data
   tbody.html("");
-  
+
 
 data.forEach((dataRow) => {
     var row = tbody.append("tr");
@@ -19,7 +19,7 @@ data.forEach((dataRow) => {
       }
     );
   });
-
+}
 
 
 // Event that Triggers a Function When the Button is Clicked
@@ -41,4 +41,4 @@ function handleClick(){
 // `on` Function to attach an Event to the Handler Function
 d3.selectAll("#filter-btn").on("click", handleClick);
 // Build Table with data.js 
-
+buildTable(tableData);
