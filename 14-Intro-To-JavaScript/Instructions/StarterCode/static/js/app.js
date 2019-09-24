@@ -1,14 +1,8 @@
 // from data.js
 var tableData = data;
 
-<<<<<<< HEAD
-var tbody = d3.select("tbody")
-
-console.log(data);
-=======
 // YOUR CODE HERE!
 var tbody = d3.select("tbody");
->>>>>>> f1edf1646f2b80b5d39130d999a7d2a3a290fcec
 
 // Grab data and loop through
 
