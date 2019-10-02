@@ -19,14 +19,12 @@ executable_path = {'executable_path': 'chromedriver.exe'}
 browser = Browser('chrome', **executable_path, headless=False)
 # print(browser)
 
+def scrape():
 
-# In[3]:
-
-
-url = "https://mars.nasa.gov/news/"
-response = requests.get(url)
-browser.visit(url)
-response
+    url = "https://mars.nasa.gov/news/"
+    response = requests.get(url)
+    browser.visit(url)
+    response
 
 
 # In[4]:
