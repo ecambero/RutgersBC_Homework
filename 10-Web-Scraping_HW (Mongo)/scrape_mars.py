@@ -13,15 +13,18 @@ from selenium.webdriver.chrome.options import Options
 import pymongo
 
 def scrape():
-    #mars_news()
-    mars_feature_img()
+    mars_news()
+    # mars_feature_img()
     
 
 
 def mars_news():
-    driver = webdriver.Chrome('./chromedriver.exe')
+    executable_path = {"executable_path": "chromedriver"}
+    driver = webdriver.Chrome(executable_path)
+    browser = Browser('chrome', driver, headless=True)
+   
     url = 'https://mars.nasa.gov/news/'
-    driver.get(url)
+    browser.visit(url)
 
     html =  driver.page_source
     soup = BeautifulSoup(html, 'html.parser')
@@ -52,7 +55,9 @@ def mars_feature_img():
     #options = Options()
     #options.add_argument('test-type')
     #browser = Browser('chrome', options=options)
-    browser = Browser('chrome', executable_path='./chromedriver.exe', headless=True)
+    executable_path = {"executable_path": "chromedriver"}
+    driver = webdriver.Chrome(executable_path)
+    browser = Browser('chrome', driver, headless=True)
     browser.visit('https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars')
     button = browser.find_by_xpath("//a[@class='button fancybox']")
     featured_image_url = "https://www.jpl.nasa.gov" + button["data-fancybox-href"]
