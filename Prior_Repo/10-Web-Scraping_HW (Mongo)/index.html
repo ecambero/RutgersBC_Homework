@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mars Rocks!</title>
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">  
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <link rel = "stylesheet" type = "text/css" href = "/10-Web-Scraping_HW (Mongo)/templates/gvstylez.css">
+</head>
+
+<body>
+   
+
+    <div class="jumbotron text-center">
+    <h1>Mission to Mars</h1>
+    <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape Mars Data!</a></p>
+    </div>
+
+    <div>
+      <!-- write a for loop that lists out your data and accesses the values using dot notation. -->
+      <div class="row">      
+        <div class="col-lg-12">
+            <div class="div1">
+              <h4>Latest Mars News</h3>
+            {% for item in article %}
+                  <h5>{{ item.title }}</h4>
+                  <h6>{{ item.desc }}</h6>
+                  <h7>News Date: {{item.date}}</h7>
+                  {% endfor %}
+          </div>
+        </div>
+      </div>
+
+      <div class="row">      
+          <div class="col-lg-4">
+              <div class="div1">
+                <h4>Latest Image from....Mars</h4>
+                  <img src={{feature_img.feature_img}}>
+            </div>
+          </div>
+        </div>
+     
+          
+          
+
+    </div>
+</body>
+
+</html>
