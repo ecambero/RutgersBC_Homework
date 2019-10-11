@@ -1,4 +1,3 @@
-// @TODO: YOUR CODE HERE!
 var svgWidth = 960;
 var svgHeight = 500;
 
@@ -13,8 +12,7 @@ var width = svgWidth - margin.left - margin.right;
 var height = svgHeight - margin.top - margin.bottom;
 
 // Creating an SVG wrapper, append an SVG group to hold the chart, shift SVG group by left and top margins.
-var svg = d3
-  .select("#scatter")
+var svg = d3.select(".chart")
   .append("svg")
   .attr("width", svgWidth)
   .attr("height", svgHeight);
@@ -23,30 +21,18 @@ var chartGroup = svg.append("g")
   .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
 // Importing the csv file
-d3.csv("assets/data/data.csv")
+d3.csv("assets/data/Data.csv")
   .then(function(projectData) {
 
     // Parse Data/Cast as numbers
-    
-
+   
     projectData.forEach(function(data) {
-      data.state = +data.state;
-      data.abbr = +data.abbr;
-      data.poverty = +data.poverty;
-      data.povertyMoe =+data.povertyMoe;
-      data.age = +data.age;
-      data.ageMoe = +data.ageMoe;
-      data.income = +data.income;	
-      data.incomeMoe= +data.incomeMoe;
-      data.healthcare= +data.healthcare;
-      data.healthcareLow= +data.healthcareLow;	
-      data.healthcareHigh = +data.healthcareHigh;
-      data.obesity = +data.obesity;	
-      data.obesityLow = +data.obesityLow;	
-      data.obesityHigh = +data.obesityHigh;	
-      data.smokes = +data.smokes;	
-      data.smokesLow = +data.smokesLow;	
-      data.smokesHigh = +data.smokesHigh;	      
+    
+    data.state = +data.state;
+    data.abbr = +data.abbr;
+    data.poverty = +data.poverty;
+    data.healthcare = +data.healthcare;
+
     });
 
     //Creating the scale functions
@@ -182,39 +168,35 @@ d3.csv("assets/data/data.csv")
     .data(projectData)
     .enter()
     .append("circle")
-    .attr("cx", d => xLinearScale(int(d.poverty)))
-    .attr("cy", d => yLinearScale(d.healthcare))
-    // .attr("r", d => zLinearScale(d.population*30))
+    .attr("cx", d => xLinearScale(d.est))
+    .attr("cy", d => yLinearScale(d.median_income))
+    .attr("r", d => zLinearScale(d.population*30))
     .style("fill", function(d) {
-      if (d.n_code == 11){return "url(#gradient1)"} ///Borough Park
-      // else if (d.borough_code < 3 ){return "none";} // Bronx
-      // else if (d.borough_code < 4 ){return "none";} // Manhattan
-       //else if (d.borough_code < 5 ){return "url(#gradient4)";} // Queens
-      // else if (d.borough_code < 6 ){return "url(#gradient5)";} //Staten Island
+      if (d.n_code == 44){return "url(#gradient4)"} 
       else {return "none"};})
     
 
 
-    //Initializing tool tip
+    // //Initializing tool tip
    
-    var toolTip = d3.tip()
-      .attr("class", "tooltip")
-      .offset([80, 120])
-      .html(function(d) {
-        return (`<b>Population:</b> ${d.population}<br><b>Median Income:</b> ${d.median_income}<br><b>Centers:</b> ${d.est}`);
-      });
+    // var toolTip = d3.tip()
+    //   .attr("class", "tooltip")
+    //   .offset([80, 120])
+    //   .html(function(d) {
+    //     return (`<b>Population:</b> ${d.population}<br><b>Median Income:</b> ${d.median_income}<br><b>Centers:</b> ${d.est}`);
+    //   });
 
-      var toolTip1 = d3.tip()
-      .attr("class", "tooltip1")
-      .offset([80, 120])
-      .html(function(d) {
-        return (`<u><b>Population:</b> ${d.population}</u><br><b>White:</b> ${d.white_pop} (${d.white_pop_percent}%)<br><b>African American:</b> ${d.afr_am_pop} (${d.afr_am_pop_percent}%)<br><b>Asian:</b> ${d.asian_pop} (${d.asian_pop_percent}%)<br><b>Native American/Pacific:</b> ${d.nat_am_pacif_pop} (${d.nat_am_pacif_pop_percent}%)<br><b>Multi-Race:</b> ${d.multi_race_pop} (${d.multi_race_pop_percent}%)<br><b>Other:</b> ${d.other_pop} (${d.other_pop_percent}%)`);
-      });
+    //   var toolTip1 = d3.tip()
+    //   .attr("class", "tooltip1")
+    //   .offset([80, 120])
+    //   .html(function(d) {
+    //     return (`<u><b>Population:</b> ${d.population}</u><br><b>White:</b> ${d.white_pop} (${d.white_pop_percent}%)<br><b>African American:</b> ${d.afr_am_pop} (${d.afr_am_pop_percent}%)<br><b>Asian:</b> ${d.asian_pop} (${d.asian_pop_percent}%)<br><b>Native American/Pacific:</b> ${d.nat_am_pacif_pop} (${d.nat_am_pacif_pop_percent}%)<br><b>Multi-Race:</b> ${d.multi_race_pop} (${d.multi_race_pop_percent}%)<br><b>Other:</b> ${d.other_pop} (${d.other_pop_percent}%)`);
+    //   });
 
-    //Creating tooltip in the Bubble chart
+    // //Creating tooltip in the Bubble chart
   
-    chartGroup.call(toolTip);
-    chartGroup.call(toolTip1);
+    // chartGroup.call(toolTip);
+    // chartGroup.call(toolTip1);
 
     //Creating Event Listeners to display/hide the tooltip
     
@@ -265,7 +247,7 @@ d3.csv("assets/data/data.csv")
     chartGroup.append("text")
       .attr("transform", `translate(${width /2.5 }, ${height - 400})`)
       .attr("class","BoroughText")
-      .text("Brooklyn : Borough Park")
+      .text("Queens: Northeast Queens")
 
     chartGroup.append("text")
       .attr("transform", `translate(${width / 2}, ${height - 427})`)
