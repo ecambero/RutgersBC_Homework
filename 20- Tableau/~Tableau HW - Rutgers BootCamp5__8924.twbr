@@ -1,0 +1,1362 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20193.19.0821.2225                               -->
+<workbook source-build='2019.3.0 (20193.19.0821.2225)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AutoCreateAndUpdateDSDPhoneLayouts ignorable='true' predowngraded='true' />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MapboxVectorStylesAndLayers />
+    <SheetIdentifierTracking ignorable='true' predowngraded='true' />
+    <WindowsPersistSimpleIdentifiers />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <repository-location id='TableauHW-RutgersBootCamp5' path='/workbooks' revision='1.0' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='2013-08 - Citi Bike trip data' inline='true' name='federated.1itlwo405f9cqx13i2gdo0qpd35f' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='2013-08 - Citi Bike trip data' name='textscan.0113m0o0cy09yo11qrh4l05p920j'>
+            <connection class='textscan' directory='C:/Users/Owner/Desktop' filename='2013-08 - Citi Bike trip data.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0113m0o0cy09yo11qrh4l05p920j' name='2013-08 - Citi Bike trip data.csv' table='[2013-08 - Citi Bike trip data#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='tripduration' ordinal='0' />
+            <column datatype='datetime' name='starttime' ordinal='1' />
+            <column datatype='datetime' name='stoptime' ordinal='2' />
+            <column datatype='integer' name='start station id' ordinal='3' />
+            <column datatype='string' name='start station name' ordinal='4' />
+            <column datatype='real' name='start station latitude' ordinal='5' />
+            <column datatype='real' name='start station longitude' ordinal='6' />
+            <column datatype='integer' name='end station id' ordinal='7' />
+            <column datatype='string' name='end station name' ordinal='8' />
+            <column datatype='real' name='end station latitude' ordinal='9' />
+            <column datatype='real' name='end station longitude' ordinal='10' />
+            <column datatype='integer' name='bikeid' ordinal='11' />
+            <column datatype='string' name='usertype' ordinal='12' />
+            <column datatype='string' name='birth year' ordinal='13' />
+            <column datatype='integer' name='gender' ordinal='14' />
+          </columns>
+        </relation>
+        <refresh increment-key='' incremental-updates='false' />
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[2013-08 - Citi Bike trip data.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tripduration</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[tripduration]</local-name>
+            <parent-name>[2013-08 - Citi Bike trip data.csv]</parent-name>
+            <remote-alias>tripduration</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>starttime</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[starttime]</local-name>
+            <parent-name>[2013-08 - Citi Bike trip data.csv]</parent-name>
+            <remote-alias>starttime</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>stoptime</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[stoptime]</local-name>
+            <parent-name>[2013-08 - Citi Bike trip data.csv]</parent-name>
+            <remote-alias>stoptime</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start station id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[start station id]</local-name>
+            <parent-name>[2013-08 - Citi Bike trip data.csv]</parent-name>
+            <remote-alias>start station id</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start station name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[start station name]</local-name>
+            <parent-name>[2013-08 - Citi Bike trip data.csv]</parent-name>
+            <remote-alias>start station name</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start station latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[start station latitude]</local-name>
+            <parent-name>[2013-08 - Citi Bike trip data.csv]</parent-name>
+            <remote-alias>start station latitude</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start station longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[start station longitude]</local-name>
+            <parent-name>[2013-08 - Citi Bike trip data.csv]</parent-name>
+            <remote-alias>start station longitude</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end station id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[end station id]</local-name>
+            <parent-name>[2013-08 - Citi Bike trip data.csv]</parent-name>
+            <remote-alias>end station id</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end station name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[end station name]</local-name>
+            <parent-name>[2013-08 - Citi Bike trip data.csv]</parent-name>
+            <remote-alias>end station name</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end station latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[end station latitude]</local-name>
+            <parent-name>[2013-08 - Citi Bike trip data.csv]</parent-name>
+            <remote-alias>end station latitude</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end station longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[end station longitude]</local-name>
+            <parent-name>[2013-08 - Citi Bike trip data.csv]</parent-name>
+            <remote-alias>end station longitude</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bikeid</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[bikeid]</local-name>
+            <parent-name>[2013-08 - Citi Bike trip data.csv]</parent-name>
+            <remote-alias>bikeid</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>usertype</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[usertype]</local-name>
+            <parent-name>[2013-08 - Citi Bike trip data.csv]</parent-name>
+            <remote-alias>usertype</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>birth year</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[birth year]</local-name>
+            <parent-name>[2013-08 - Citi Bike trip data.csv]</parent-name>
+            <remote-alias>birth year</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gender</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[gender]</local-name>
+            <parent-name>[2013-08 - Citi Bike trip data.csv]</parent-name>
+            <remote-alias>gender</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Gender_String' datatype='string' name='[Calculation_2652057273751023616]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [gender] = 0 THEN &apos;UNKNOWN&apos;&#13;&#10;ELSEIF [gender] = 1 THEN &apos; MALE&apos;&#13;&#10;ELSEIF [gender] = 2 THEN &apos;FEMALE&apos;&#13;&#10;ELSE &apos;UNKNOWN&apos; END' />
+      </column>
+      <column caption='Age' datatype='integer' name='[Calculation_2652057273752735745]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IFNULL((year(NOW())- int([birth year])),0)' />
+      </column>
+      <column caption='Duration (Mins)' datatype='real' name='[Calculation_2652057273755131907]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[tripduration]/60' />
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column aggregation='Sum' caption='Bikeid' datatype='integer' name='[bikeid]' role='dimension' type='ordinal' />
+      <column caption='Birth Year' datatype='string' name='[birth year]' role='dimension' type='nominal' />
+      <column caption='End Station Id' datatype='integer' name='[end station id]' role='measure' type='quantitative' />
+      <column aggregation='Avg' caption='End Station Latitude' datatype='real' name='[end station latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' caption='End Station Longitude' datatype='real' name='[end station longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column caption='End Station Name' datatype='string' name='[end station name]' role='dimension' type='nominal' />
+      <column aggregation='Sum' caption='Gender' datatype='integer' name='[gender]' role='dimension' type='ordinal' />
+      <column caption='Start Station Id' datatype='integer' name='[start station id]' role='measure' type='quantitative' />
+      <column aggregation='Avg' caption='Start Station Latitude' datatype='real' name='[start station latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' caption='Start Station Longitude' datatype='real' name='[start station longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column caption='Start Station Name' datatype='string' name='[start station name]' role='dimension' type='nominal' />
+      <column caption='Starttime' datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+      <column caption='Stoptime' datatype='datetime' name='[stoptime]' role='dimension' type='ordinal' />
+      <column caption='Tripduration' datatype='integer' name='[tripduration]' role='measure' type='quantitative' />
+      <column caption='Usertype' datatype='string' name='[usertype]' role='dimension' type='nominal' />
+      <column-instance column='[Calculation_2652057273751023616]' derivation='None' name='[none:Calculation_2652057273751023616:nk]' pivot='key' type='nominal' />
+      <extract count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='Data/TableauTemp/TEMP_0981o6e1q2r50g124g6i40hcyo9w.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>tripduration</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[tripduration]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>tripduration</remote-alias>
+              <ordinal>0</ordinal>
+              <family>2013-08 - Citi Bike trip data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>10543</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>starttime</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[starttime]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>starttime</remote-alias>
+              <ordinal>1</ordinal>
+              <family>2013-08 - Citi Bike trip data.csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>937295</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>stoptime</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[stoptime]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>stoptime</remote-alias>
+              <ordinal>2</ordinal>
+              <family>2013-08 - Citi Bike trip data.csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>904958</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>start station id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[start station id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>start station id</remote-alias>
+              <ordinal>3</ordinal>
+              <family>2013-08 - Citi Bike trip data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>412</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>start station name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[start station name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>start station name</remote-alias>
+              <ordinal>4</ordinal>
+              <family>2013-08 - Citi Bike trip data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>412</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>start station latitude</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[start station latitude]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>start station latitude</remote-alias>
+              <ordinal>5</ordinal>
+              <family>2013-08 - Citi Bike trip data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>412</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>start station longitude</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[start station longitude]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>start station longitude</remote-alias>
+              <ordinal>6</ordinal>
+              <family>2013-08 - Citi Bike trip data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>412</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>end station id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[end station id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>end station id</remote-alias>
+              <ordinal>7</ordinal>
+              <family>2013-08 - Citi Bike trip data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>415</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>end station name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[end station name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>end station name</remote-alias>
+              <ordinal>8</ordinal>
+              <family>2013-08 - Citi Bike trip data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>415</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>end station latitude</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[end station latitude]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>end station latitude</remote-alias>
+              <ordinal>9</ordinal>
+              <family>2013-08 - Citi Bike trip data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>415</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>end station longitude</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[end station longitude]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>end station longitude</remote-alias>
+              <ordinal>10</ordinal>
+              <family>2013-08 - Citi Bike trip data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>415</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>bikeid</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[bikeid]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>bikeid</remote-alias>
+              <ordinal>11</ordinal>
+              <family>2013-08 - Citi Bike trip data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>29983</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>usertype</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[usertype]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>usertype</remote-alias>
+              <ordinal>12</ordinal>
+              <family>2013-08 - Citi Bike trip data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>birth year</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[birth year]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>birth year</remote-alias>
+              <ordinal>13</ordinal>
+              <family>2013-08 - Citi Bike trip data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>70</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>gender</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[gender]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>gender</remote-alias>
+              <ordinal>14</ordinal>
+              <family>2013-08 - Citi Bike trip data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.482143' measure-ordering='alphabetic' measure-percentage='0.517857' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Calculation_2652057273751023616:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot; MALE&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;UNKNOWN&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;FEMALE&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='Bike Usage'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;&#10;As illustrated below, we can see the top five bikes in-term of usage.  These are more than likely ready to be replaced based on time used</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='2013-08 - Citi Bike trip data' name='federated.1itlwo405f9cqx13i2gdo0qpd35f' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1itlwo405f9cqx13i2gdo0qpd35f'>
+            <column caption='Gender_String' datatype='string' name='[Calculation_2652057273751023616]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [gender] = 0 THEN &apos;UNKNOWN&apos;&#13;&#10;ELSEIF [gender] = 1 THEN &apos; MALE&apos;&#13;&#10;ELSEIF [gender] = 2 THEN &apos;FEMALE&apos;&#13;&#10;ELSE &apos;UNKNOWN&apos; END' />
+            </column>
+            <column caption='Duration (Mins)' datatype='real' name='[Calculation_2652057273755131907]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[tripduration]/60' />
+            </column>
+            <column aggregation='Sum' caption='Bikeid' datatype='integer' name='[bikeid]' role='dimension' type='ordinal' />
+            <column aggregation='Sum' caption='Gender' datatype='integer' name='[gender]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_2652057273751023616]' derivation='None' name='[none:Calculation_2652057273751023616:nk]' pivot='key' type='nominal' />
+            <column-instance column='[bikeid]' derivation='None' name='[none:bikeid:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[usertype]' derivation='None' name='[none:usertype:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_2652057273755131907]' derivation='Sum' name='[sum:Calculation_2652057273755131907:qk]' pivot='key' type='quantitative' />
+            <column caption='Tripduration' datatype='integer' name='[tripduration]' role='measure' type='quantitative' />
+            <column caption='Usertype' datatype='string' name='[usertype]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:Calculation_2652057273751023616:nk]'>
+            <groupfilter function='level-members' level='[none:Calculation_2652057273751023616:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:usertype:nk]'>
+            <groupfilter function='level-members' level='[none:usertype:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:bikeid:ok]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[sum:Calculation_2652057273755131907:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:Calculation_2652057273751023616:nk]</column>
+            <column>[federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:usertype:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[sum:Calculation_2652057273755131907:qk]' palette='red_black_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[sum:Calculation_2652057273755131907:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:bikeid:ok]</rows>
+        <cols>[federated.1itlwo405f9cqx13i2gdo0qpd35f].[sum:Calculation_2652057273755131907:qk]</cols>
+      </table>
+      <simple-id uuid='{4CC581B1-3C97-49FA-BC14-39AE815D2430}' />
+    </worksheet>
+    <worksheet name='End of Trip Stations'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#4e79a7' fontname='Tableau Semibold' underline='true'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='2013-08 - Citi Bike trip data' name='federated.1itlwo405f9cqx13i2gdo0qpd35f' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1itlwo405f9cqx13i2gdo0qpd35f'>
+            <column caption='Gender_String' datatype='string' name='[Calculation_2652057273751023616]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [gender] = 0 THEN &apos;UNKNOWN&apos;&#13;&#10;ELSEIF [gender] = 1 THEN &apos; MALE&apos;&#13;&#10;ELSEIF [gender] = 2 THEN &apos;FEMALE&apos;&#13;&#10;ELSE &apos;UNKNOWN&apos; END' />
+            </column>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column aggregation='Avg' caption='End Station Latitude' datatype='real' name='[end station latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+            <column aggregation='Avg' caption='End Station Longitude' datatype='real' name='[end station longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+            <column caption='End Station Name' datatype='string' name='[end station name]' role='dimension' type='nominal' />
+            <column aggregation='Sum' caption='Gender' datatype='integer' name='[gender]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_2652057273751023616]' derivation='None' name='[none:Calculation_2652057273751023616:nk]' pivot='key' type='nominal' />
+            <column-instance column='[end station latitude]' derivation='None' name='[none:end station latitude:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[end station longitude]' derivation='None' name='[none:end station longitude:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[end station name]' derivation='None' name='[none:end station name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:end station longitude:qk]' field-type='quantitative' max='-8229364.1780999303' min='-8242253.9994457634' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:end station latitude:qk]' field-type='quantitative' max='4980676.8736562841' min='4966443.6547327703' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='height' field='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:Calculation_2652057273751023616:nk]' value='10' />
+            <format attr='height-header' value='10' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[sum:Number of Records:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#f2dada</color>
+                <color>#f3c3c3</color>
+                <color>#f5abab</color>
+                <color>#f69393</color>
+                <color>#f87c7c</color>
+                <color>#f96363</color>
+                <color>#fa4b4b</color>
+                <color>#fc3232</color>
+                <color>#fd1919</color>
+                <color>#ff0000</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:Calculation_2652057273751023616:nk]' />
+              <size column='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[sum:Number of Records:qk]' />
+              <lod column='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:end station name:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='false' />
+                <format attr='mark-labels-mode' value='range' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:end station latitude:qk]</rows>
+        <cols>([federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:Calculation_2652057273751023616:nk] * [federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:end station longitude:qk])</cols>
+      </table>
+      <simple-id uuid='{A0B05FE5-DB91-4630-994C-27A2B0077103}' />
+    </worksheet>
+    <worksheet name='Gender vs Qty of Trips'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='2013-08 - Citi Bike trip data' name='federated.1itlwo405f9cqx13i2gdo0qpd35f' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1itlwo405f9cqx13i2gdo0qpd35f'>
+            <column caption='Gender_String' datatype='string' name='[Calculation_2652057273751023616]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [gender] = 0 THEN &apos;UNKNOWN&apos;&#13;&#10;ELSEIF [gender] = 1 THEN &apos; MALE&apos;&#13;&#10;ELSEIF [gender] = 2 THEN &apos;FEMALE&apos;&#13;&#10;ELSE &apos;UNKNOWN&apos; END' />
+            </column>
+            <column caption='Age' datatype='integer' name='[Calculation_2652057273752735745]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IFNULL((year(NOW())- int([birth year])),0)' />
+            </column>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column-instance column='[Calculation_2652057273752735745]' derivation='Avg' name='[avg:Calculation_2652057273752735745:qk]' pivot='key' type='quantitative' />
+            <column caption='Birth Year' datatype='string' name='[birth year]' role='dimension' type='nominal' />
+            <column aggregation='Sum' caption='Gender' datatype='integer' name='[gender]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_2652057273751023616]' derivation='None' name='[none:Calculation_2652057273751023616:nk]' pivot='key' type='nominal' />
+            <column-instance column='[start station name]' derivation='None' name='[none:start station name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[usertype]' derivation='None' name='[none:usertype:nk]' pivot='key' type='nominal' />
+            <column caption='Start Station Name' datatype='string' name='[start station name]' role='dimension' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+            <column caption='Usertype' datatype='string' name='[usertype]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:Calculation_2652057273751023616:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Calculation_2652057273751023616:nk]' member='&quot; MALE&quot;' />
+              <groupfilter function='member' level='[none:Calculation_2652057273751023616:nk]' member='&quot;FEMALE&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:usertype:nk]'>
+            <groupfilter function='member' level='[none:usertype:nk]' member='&quot;Subscriber&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:Calculation_2652057273751023616:nk]</column>
+            <column>[federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:usertype:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' domain-expand='false' field='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[avg:Calculation_2652057273752735745:qk]' field-type='quantitative' scope='rows' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:Calculation_2652057273751023616:nk]' />
+              <lod column='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:start station name:nk]' />
+              <lod column='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:usertype:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1itlwo405f9cqx13i2gdo0qpd35f].[avg:Calculation_2652057273752735745:qk]</rows>
+        <cols>[federated.1itlwo405f9cqx13i2gdo0qpd35f].[sum:Number of Records:qk]</cols>
+      </table>
+      <simple-id uuid='{0EBDB010-EECE-432F-BAD1-5F8BB1C113B8}' />
+    </worksheet>
+    <worksheet name='Gender vs TripDuration'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='2013-08 - Citi Bike trip data' name='federated.1itlwo405f9cqx13i2gdo0qpd35f' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1itlwo405f9cqx13i2gdo0qpd35f'>
+            <column caption='Gender_String' datatype='string' name='[Calculation_2652057273751023616]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [gender] = 0 THEN &apos;UNKNOWN&apos;&#13;&#10;ELSEIF [gender] = 1 THEN &apos; MALE&apos;&#13;&#10;ELSEIF [gender] = 2 THEN &apos;FEMALE&apos;&#13;&#10;ELSE &apos;UNKNOWN&apos; END' />
+            </column>
+            <column caption='Age' datatype='integer' name='[Calculation_2652057273752735745]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IFNULL((year(NOW())- int([birth year])),0)' />
+            </column>
+            <column caption='Duration (Mins)' datatype='real' name='[Calculation_2652057273755131907]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[tripduration]/60' />
+            </column>
+            <column-instance column='[Calculation_2652057273752735745]' derivation='Avg' name='[avg:Calculation_2652057273752735745:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_2652057273755131907]' derivation='Avg' name='[avg:Calculation_2652057273755131907:qk]' pivot='key' type='quantitative' />
+            <column caption='Birth Year' datatype='string' name='[birth year]' role='dimension' type='nominal' />
+            <column aggregation='Sum' caption='Gender' datatype='integer' name='[gender]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_2652057273751023616]' derivation='None' name='[none:Calculation_2652057273751023616:nk]' pivot='key' type='nominal' />
+            <column-instance column='[start station name]' derivation='None' name='[none:start station name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[usertype]' derivation='None' name='[none:usertype:nk]' pivot='key' type='nominal' />
+            <column caption='Start Station Name' datatype='string' name='[start station name]' role='dimension' type='nominal' />
+            <column caption='Tripduration' datatype='integer' name='[tripduration]' role='measure' type='quantitative' />
+            <column caption='Usertype' datatype='string' name='[usertype]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:Calculation_2652057273751023616:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Calculation_2652057273751023616:nk]' member='&quot; MALE&quot;' />
+              <groupfilter function='member' level='[none:Calculation_2652057273751023616:nk]' member='&quot;FEMALE&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:usertype:nk]'>
+            <groupfilter function='member' level='[none:usertype:nk]' member='&quot;Subscriber&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:Calculation_2652057273751023616:nk]</column>
+            <column>[federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:usertype:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' domain-expand='false' field='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[avg:Calculation_2652057273752735745:qk]' field-type='quantitative' scope='rows' type='space' />
+            <encoding attr='space' class='0' domain-expand='false' field='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[avg:Calculation_2652057273755131907:qk]' field-type='quantitative' scope='cols' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:Calculation_2652057273751023616:nk]' />
+              <lod column='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:start station name:nk]' />
+              <shape column='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:usertype:nk]' />
+            </encodings>
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' fit='linear' />
+          </pane>
+        </panes>
+        <rows>[federated.1itlwo405f9cqx13i2gdo0qpd35f].[avg:Calculation_2652057273752735745:qk]</rows>
+        <cols>([federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:Calculation_2652057273751023616:nk] * [federated.1itlwo405f9cqx13i2gdo0qpd35f].[avg:Calculation_2652057273755131907:qk])</cols>
+      </table>
+      <simple-id uuid='{D838023D-345E-454E-A4DD-539C9FC98A7D}' />
+    </worksheet>
+    <worksheet name='Starting Stations'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#4e79a7' fontname='Tableau Semibold' underline='true'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='2013-08 - Citi Bike trip data' name='federated.1itlwo405f9cqx13i2gdo0qpd35f' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1itlwo405f9cqx13i2gdo0qpd35f'>
+            <column caption='Gender_String' datatype='string' name='[Calculation_2652057273751023616]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [gender] = 0 THEN &apos;UNKNOWN&apos;&#13;&#10;ELSEIF [gender] = 1 THEN &apos; MALE&apos;&#13;&#10;ELSEIF [gender] = 2 THEN &apos;FEMALE&apos;&#13;&#10;ELSE &apos;UNKNOWN&apos; END' />
+            </column>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column-instance column='[start station name]' derivation='Attribute' name='[attr:start station name:nk]' pivot='key' type='nominal' />
+            <column aggregation='Sum' caption='Gender' datatype='integer' name='[gender]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_2652057273751023616]' derivation='None' name='[none:Calculation_2652057273751023616:nk]' pivot='key' type='nominal' />
+            <column-instance column='[start station latitude]' derivation='None' name='[none:start station latitude:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[start station longitude]' derivation='None' name='[none:start station longitude:qk]' pivot='key' type='quantitative' />
+            <column aggregation='Avg' caption='Start Station Latitude' datatype='real' name='[start station latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+            <column aggregation='Avg' caption='Start Station Longitude' datatype='real' name='[start station longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+            <column caption='Start Station Name' datatype='string' name='[start station name]' role='dimension' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:start station longitude:qk]' field-type='quantitative' max='-8231036.5100517031' min='-8242219.4564506914' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:start station latitude:qk]' field-type='quantitative' max='4979419.1860355586' min='4967070.7352668308' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='Zip Code Labels' value='true' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:Calculation_2652057273751023616:nk]' />
+              <size column='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[sum:Number of Records:qk]' />
+              <lod column='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[attr:start station name:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='false' />
+                <format attr='mark-labels-mode' value='range' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:start station latitude:qk]</rows>
+        <cols>([federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:Calculation_2652057273751023616:nk] * [federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:start station longitude:qk])</cols>
+      </table>
+      <simple-id uuid='{4E07ADFC-FC14-4151-8658-5D30804EDD52}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Gender and Age vs Usage'>
+      <style />
+      <size sizing-mode='automatic' />
+      <datasources>
+        <datasource caption='2013-08 - Citi Bike trip data' name='federated.1itlwo405f9cqx13i2gdo0qpd35f' />
+      </datasources>
+      <datasource-dependencies datasource='federated.1itlwo405f9cqx13i2gdo0qpd35f'>
+        <column caption='Gender_String' datatype='string' name='[Calculation_2652057273751023616]' role='dimension' type='nominal'>
+          <calculation class='tableau' formula='IF [gender] = 0 THEN &apos;UNKNOWN&apos;&#13;&#10;ELSEIF [gender] = 1 THEN &apos; MALE&apos;&#13;&#10;ELSEIF [gender] = 2 THEN &apos;FEMALE&apos;&#13;&#10;ELSE &apos;UNKNOWN&apos; END' />
+        </column>
+        <column-instance column='[Calculation_2652057273751023616]' derivation='None' name='[none:Calculation_2652057273751023616:nk]' pivot='key' type='nominal' />
+        <column-instance column='[usertype]' derivation='None' name='[none:usertype:nk]' pivot='key' type='nominal' />
+        <column caption='Usertype' datatype='string' name='[usertype]' role='dimension' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98142' id='7' param='horz' type='layout-flow' w='99034' x='483' y='929'>
+            <zone h='98142' id='5' type='layout-basic' w='89378' x='483' y='929'>
+              <zone h='46751' id='3' name='Gender vs TripDuration' w='89378' x='483' y='52320'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='43987' id='12' name='Gender vs Qty of Trips' w='89378' x='483' y='8333'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone forceUpdate='true' h='7404' id='16' type='text' w='89378' x='483' y='929'>
+                <formatted-text>
+                  <run fontalignment='1' fontsize='12'>As illustrated below,  Citibikes shows high-usage within the Male Population with an average age clustered around the 40-45 range. </run>
+                  <run fontalignment='1'>Æ&#10;</run>
+                  <run fontalignment='1' fontsize='12'>Avg rides are strongly clustered around the 12-16 min range for both genders.  </run>
+                </formatted-text>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='98142' id='6' is-fixed='true' param='vert' type='layout-flow' w='9656' x='89861' y='929'>
+              <zone h='12195' id='8' name='Gender vs TripDuration' param='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:usertype:nk]' type='filter' w='9656' x='89861' y='929'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='14866' id='9' name='Gender vs TripDuration' param='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:Calculation_2652057273751023616:nk]' type='filter' w='9656' x='89861' y='13124'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='5923' id='10' name='Gender vs TripDuration' pane-specification-id='2' param='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:usertype:nk]' type='shape' w='9656' x='89861' y='27990'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='8362' id='11' name='Gender vs TripDuration' pane-specification-id='2' param='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:Calculation_2652057273751023616:nk]' type='color' w='9656' x='89861' y='33913'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='12195' id='13' name='Gender vs Qty of Trips' param='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:usertype:nk]' type='filter' w='9656' x='89861' y='42275'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='14866' id='14' name='Gender vs Qty of Trips' param='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:Calculation_2652057273751023616:nk]' type='filter' w='9656' x='89861' y='54470'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1050' minheight='1050' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='35' type='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98230' id='36' param='vert' type='layout-flow' w='99064' x='468' y='885'>
+                <zone forceUpdate='true' h='7411' id='16' type='text' w='89702' x='468' y='885'>
+                  <formatted-text>
+                    <run fontalignment='1' fontsize='12'>As illustrated below,  Citibikes shows high-usage within the Male Population with an average age clustered around the 40-45 range. </run>
+                    <run fontalignment='1'>Æ&#10;</run>
+                    <run fontalignment='1' fontsize='12'>Avg rides are strongly clustered around the 12-16 min range for both genders.  </run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='9845' id='13' mode='checkdropdown' name='Gender vs Qty of Trips' param='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:usertype:nk]' type='filter' w='9362' x='90170' y='35067'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='11947' id='14' mode='checkdropdown' name='Gender vs Qty of Trips' param='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:Calculation_2652057273751023616:nk]' type='filter' w='9362' x='90170' y='44912'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='44027' id='12' is-fixed='true' name='Gender vs Qty of Trips' w='89702' x='468' y='8296'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='9845' id='8' mode='checkdropdown' name='Gender vs TripDuration' param='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:usertype:nk]' type='filter' w='9362' x='90170' y='885'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='11947' id='9' mode='checkdropdown' name='Gender vs TripDuration' param='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:Calculation_2652057273751023616:nk]' type='filter' w='9362' x='90170' y='10730'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='46792' id='3' is-fixed='true' name='Gender vs TripDuration' w='89702' x='468' y='52323'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='5089' id='10' name='Gender vs TripDuration' pane-specification-id='2' param='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:usertype:nk]' type='shape' w='9362' x='90170' y='22677'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='7301' id='11' name='Gender vs TripDuration' pane-specification-id='2' param='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:Calculation_2652057273751023616:nk]' type='color' w='9362' x='90170' y='27766'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{BB7EE376-1DFB-44A3-B1F2-4554A3DFAAF0}' />
+    </dashboard>
+    <dashboard name='Start vs End Stations'>
+      <style />
+      <size sizing-mode='automatic' />
+      <zones>
+        <zone h='100000' id='4' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='47192' id='7' param='horz' type='layout-flow' w='99034' x='483' y='51879'>
+            <zone h='47192' id='5' type='layout-basic' w='99034' x='483' y='51879'>
+              <zone h='47192' id='9' name='End of Trip Stations' w='99034' x='483' y='51879'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone h='43547' id='3' name='Starting Stations' w='99034' x='483' y='8332'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='7403' id='10' type='layout-flow' w='99034' x='483' y='929'>
+            <zone h='7403' id='8' name='Starting Stations' pane-specification-id='2' param='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[sum:Number of Records:qk]' type='size' w='99034' x='483' y='929'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='29' type='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98230' id='30' param='vert' type='layout-flow' w='99064' x='468' y='885'>
+                <zone fixed-size='280' h='43586' id='3' is-fixed='true' name='Starting Stations' w='99064' x='468' y='8295'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='7410' id='8' name='Starting Stations' pane-specification-id='2' param='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[sum:Number of Records:qk]' type='size' w='99064' x='468' y='885'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='47234' id='9' is-fixed='true' name='End of Trip Stations' w='99064' x='468' y='51881'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{52E541AC-F15F-4DA2-8D02-A3AD3DD3987F}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='37'>
+    <window class='worksheet' maximized='true' name='Starting Stations'>
+      <cards>
+        <edge name='left'>
+          <strip size='193'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='2' param='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[sum:Number of Records:qk]' type='size' />
+            <card pane-specification-id='2' param='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:Calculation_2652057273751023616:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{A4A5AA3C-1EE0-448C-B867-409272E4471F}' />
+    </window>
+    <window class='worksheet' name='End of Trip Stations'>
+      <cards>
+        <edge name='left'>
+          <strip size='193'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='4' param='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[sum:Number of Records:qk]' type='size' />
+            <card pane-specification-id='4' param='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:Calculation_2652057273751023616:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{C594A31F-A967-4AEC-9595-2AF7DD6D17DF}' />
+    </window>
+    <window class='dashboard' name='Start vs End Stations'>
+      <viewpoints>
+        <viewpoint name='End of Trip Stations'>
+          <zoom type='entire-view' />
+          <default-map-tool-selection tool='2' />
+        </viewpoint>
+        <viewpoint name='Starting Stations'>
+          <zoom type='entire-view' />
+          <default-map-tool-selection tool='2' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{127ECE76-9C86-4CE7-80C1-50EAC32DEF55}' />
+    </window>
+    <window class='worksheet' name='Gender vs TripDuration'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:usertype:nk]' type='filter' />
+            <card param='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:Calculation_2652057273751023616:nk]' type='filter' />
+            <card pane-specification-id='2' param='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:usertype:nk]' type='shape' />
+            <card pane-specification-id='2' param='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:Calculation_2652057273751023616:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{3E6A1B1A-B6E5-4650-987F-950180424BB4}' />
+    </window>
+    <window class='worksheet' name='Gender vs Qty of Trips'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:usertype:nk]' type='filter' />
+            <card param='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:Calculation_2652057273751023616:nk]' type='filter' />
+            <card pane-specification-id='2' param='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:Calculation_2652057273751023616:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{8CB15797-D844-4FA9-B1F7-4FBCEEB8F4C9}' />
+    </window>
+    <window class='dashboard' name='Gender and Age vs Usage'>
+      <viewpoints>
+        <viewpoint name='Gender vs Qty of Trips'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Gender vs TripDuration'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='6' />
+      <simple-id uuid='{49E4C5FE-62BA-4385-89F3-9DD17308FFC8}' />
+    </window>
+    <window class='worksheet' name='Bike Usage'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:usertype:nk]' type='filter' />
+            <card param='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[none:Calculation_2652057273751023616:nk]' type='filter' />
+            <card pane-specification-id='1' param='[federated.1itlwo405f9cqx13i2gdo0qpd35f].[sum:Calculation_2652057273755131907:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{A75DA909-A323-477D-B737-6C4B2E39B9AE}' />
+    </window>
+  </windows>
+</workbook>
