@@ -626,6 +626,10 @@
               </color-palette>
             </encoding>
           </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='Zip Code Labels' value='true' />
+            <format attr='enabled' id='Zip Code Boundaries' value='true' />
+          </style-rule>
           <style-rule element='map'>
             <format attr='washout' value='0.0' />
           </style-rule>
@@ -842,6 +846,7 @@
           </style-rule>
           <style-rule element='map-layer'>
             <format attr='enabled' id='Zip Code Labels' value='true' />
+            <format attr='enabled' id='Zip Code Boundaries' value='true' />
           </style-rule>
           <style-rule element='map'>
             <format attr='washout' value='0.0' />
@@ -1177,7 +1182,7 @@
     </dashboard>
   </dashboards>
   <windows source-height='37'>
-    <window class='worksheet' maximized='true' name='Starting Stations'>
+    <window class='worksheet' name='Starting Stations'>
       <cards>
         <edge name='left'>
           <strip size='193'>
@@ -1209,7 +1214,7 @@
       </viewpoint>
       <simple-id uuid='{A4A5AA3C-1EE0-448C-B867-409272E4471F}' />
     </window>
-    <window class='worksheet' name='End of Trip Stations'>
+    <window class='worksheet' maximized='true' name='End of Trip Stations'>
       <cards>
         <edge name='left'>
           <strip size='193'>
